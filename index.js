@@ -4,7 +4,7 @@ var express = require('express'),
 	_ = require('underscore');
 
 
-const PORT=80;
+app.set('port', (process.env.PORT || 5000));
 var app = express();
 	app.engine('html', mustacheExpress());
 	app.set('view engine', 'html');
@@ -185,7 +185,8 @@ app.get('/', function(request, response) {
     });
 });
 
-app.listen(PORT || 3000, function(){
+
+app.listen(process.env.PORT || 5000, function(){
     console.log("Server listening on: http://localhost:%s", PORT);
 });
 
