@@ -189,7 +189,7 @@ app.get('/', function(request, response) {
 
 
 app.listen(process.env.PORT || 5000, function(){
-    //console.log("Server listening on: http://localhost:%s", PORT);
+    console.log("Server listening");
 });
 
 
