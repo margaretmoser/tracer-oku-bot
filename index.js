@@ -4,13 +4,15 @@ var express = require('express'),
 	_ = require('underscore');
 
 
-app.set('port', (process.env.PORT || 5000));
+
 var app = express();
 	app.engine('html', mustacheExpress());
 	app.set('view engine', 'html');
 	app.set('views', __dirname + '/html');
 	app.use(express.static(__dirname + '/public'));
 
+
+app.set('port', (process.env.PORT || 5000));
 
 
 
